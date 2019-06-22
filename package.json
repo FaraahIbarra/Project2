@@ -1,10 +1,10 @@
 {
   "name": "Project2",
   "version": "1.0.0",
-  "description" : "project 2",
-  "scripts" : {
+  "description": "project 2",
+  "scripts": {
     "start": "nodemon server.js"
-    },
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/project2group/Project2.git"

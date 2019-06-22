@@ -9,12 +9,11 @@ let config = {
     },
     prod: {
         mysql: {
-            url: process.env.JAWSDB.URL
+            url: process.env.JAWSDB_URL
         },
         apiKeys: {
 
         }
     }
 };
-
 module.exports = config[process.env.APP_ENV || "local"];
