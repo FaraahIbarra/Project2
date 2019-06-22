@@ -17,4 +17,4 @@ let config = {
     }
 };
 
-module.exports = config[process.evn.APP_ENV || "local"];
+module.exports = config[process.env.APP_ENV || "local"];
