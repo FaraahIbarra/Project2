@@ -1,0 +1,21 @@
+-- Starter Data
+INSERT INTO text_tb (mood, content) VALUES ('Confused', "Que?");
+INSERT INTO text_tb (mood, content) VALUES ('Confused', "It's not confusing, but I'm confused");
+INSERT INTO text_tb (mood, content) VALUES ('Angry',"I'm not angry, I'm happiness challenged");
+INSERT INTO text_tb (mood, content) VALUES ('Angry','Come at me bro');
+INSERT INTO text_tb (mood, content) VALUES ('Happy','That moment when you find the perfect avocado at the supermarket');
+INSERT INTO text_tb (mood, content) VALUES ('Happy','Happy hour?  I got a lotta time for that');
+INSERT INTO text_tb (mood, content) VALUES ('Sad','When you find out you have to go to summer school');
+INSERT INTO text_tb (mood, content) VALUES ('Sad','Shit...');
+INSERT INTO text_tb (mood, content) VALUES ('In Love',"I love you.  Just kidding, where's my fucking food??");
+INSERT INTO text_tb (mood, content) VALUES ('In Love',"I'm shy at first, but once I'm comfortable with you get ready for some crazy shit...");
+INSERT INTO text_tb (mood, content) VALUES ('Sassy',"Shout out to old people for graduating high school without Google");
+INSERT INTO text_tb (mood, content) VALUES ('Sassy',"Wanna hear a secret? Your're adopted");
+INSERT INTO text_tb (mood, content) VALUES ('Over it','Yeah dating is cool, but ... have you ever had stuffed crust pizza?');
+INSERT INTO text_tb (mood, content) VALUES ('Over it','Woke up today ... It was terrible');
+INSERT INTO text_tb (mood, content) VALUES ('Excited',"Reasons to date me: 1. No one will try to steal me from you. 2. Sometimes I'm funny");
+INSERT INTO text_tb (mood, content) VALUES ('Excited',"I'm so excited and I can't stop yelling!!");
+INSERT INTO text_tb (mood, content) VALUES ('Exhausted',"I don't know wo is calling me at 5am, but i will find you, and I will kill you.");
+INSERT INTO text_tb (mood, content) VALUES ('Exhausted',"Leave me alone I'm tired.");
+INSERT INTO text_tb (mood, content) VALUES ('Coding','When asked what did you click on, you said "nothing".  The 12 tabs in you browser determined that was a lie');
+INSERT INTO text_tb (mood, content) VALUES ('Coding',"If there's a steady paycheck in it, I'll believe anything you say");
