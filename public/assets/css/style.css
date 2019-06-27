@@ -1,0 +1,26 @@
+body{
+    background-color: aquamarine;
+};
+.navbar {
+    font-family: 'Didact Gothic', sans-serif;
+    height: 75px;
+  
+}
+.container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.image-wrapper {
+    margin-bottom: 50px;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    color: #black;
+    text-align: center;
+    height: 60px;
+    padding-top: 20px;
+}
