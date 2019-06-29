@@ -2,23 +2,23 @@
 -- (this prevents us from having to convet the images to blobs)
 -- at least that is what I found here https://stackoverflow.com/questions/6472233/can-i-store-images-in-mysql
 
-INSERT INTO images_tb (mood, content) VALUES ('Confused', '/public/assets/images/confused1.jpg');
-INSERT INTO images_tb (mood, content) VALUES ('Confused', '/public/assets/images/confused2.jpg');
-INSERT INTO images_tb (mood, content) VALUES ('Angry','/public/assets/images/angry1.jpg');
-INSERT INTO images_tb (mood, content) VALUES ('Angry','/public/assets/images/angry2.jpg');
-INSERT INTO images_tb (mood, content) VALUES ('Happy','/public/assets/images/happy1.jpg');
-INSERT INTO images_tb (mood, content) VALUES ('Happy','/public/assets/images/happy2.jpg');
-INSERT INTO images_tb (mood, content) VALUES ('Sad','/public/assets/images/sad1.jpg');
-INSERT INTO images_tb (mood, content) VALUES ('Sad','/public/assets/images/sad2.jpg');
-INSERT INTO images_tb (mood, content) VALUES ('In Love','/public/assets/images/inlove1.jpg');
-INSERT INTO images_tb (mood, content) VALUES ('In Love','/public/assets/images/inlove2.jpg');
-INSERT INTO images_tb (mood, content) VALUES ('Sassy','/public/assets/images/sassy1.jpg');
-INSERT INTO images_tb (mood, content) VALUES ('Sassy','/public/assets/images/sassy1.jpg');
-INSERT INTO images_tb (mood, content) VALUES ('Over it','/public/assets/images/overit1.jpg');
-INSERT INTO images_tb (mood, content) VALUES ('Over it','/public/assets/images/overit2.jpg');
-INSERT INTO images_tb (mood, content) VALUES ('Excited','/public/assets/images/excitied1.jpg');
-INSERT INTO images_tb (mood, content) VALUES ('Excited','/public/assets/images/excitied2.jpg');
-INSERT INTO images_tb (mood, content) VALUES ('Exhausted','/public/assets/images/exhausted1.jpg');
-INSERT INTO images_tb (mood, content) VALUES ('Exhausted','/public/assets/images/exhausted2.jpg');
-INSERT INTO images_tb (mood, content) VALUES ('Coding','/public/assets/images/coding1.jpg');
-INSERT INTO images_tb (mood, content) VALUES ('Coding','/public/assets/images/coding2.jpg');
+INSERT INTO images_tb (mood, content) VALUES ('Confused', '/assets/images/confused1.jpg');
+INSERT INTO images_tb (mood, content) VALUES ('Confused', '/assets/images/confused2.jpg');
+INSERT INTO images_tb (mood, content) VALUES ('Angry','/assets/images/angry1.jpg');
+INSERT INTO images_tb (mood, content) VALUES ('Angry','/assets/images/angry2.jpg');
+INSERT INTO images_tb (mood, content) VALUES ('Happy','/assets/images/happy1.jpg');
+INSERT INTO images_tb (mood, content) VALUES ('Happy','/assets/images/happy2.jpg');
+INSERT INTO images_tb (mood, content) VALUES ('Sad','/assets/images/sad1.jpg');
+INSERT INTO images_tb (mood, content) VALUES ('Sad','/assets/images/sad2.jpg');
+INSERT INTO images_tb (mood, content) VALUES ('In Love','/assets/images/inlove1.jpg');
+INSERT INTO images_tb (mood, content) VALUES ('In Love','/assets/images/inlove2.jpg');
+INSERT INTO images_tb (mood, content) VALUES ('Sassy','/assets/images/sassy1.jpg');
+INSERT INTO images_tb (mood, content) VALUES ('Sassy','/assets/images/sassy1.jpg');
+INSERT INTO images_tb (mood, content) VALUES ('Over it','/assets/images/overit1.jpg');
+INSERT INTO images_tb (mood, content) VALUES ('Over it','/assets/images/overit2.jpg');
+INSERT INTO images_tb (mood, content) VALUES ('Excited','/assets/images/excitied1.jpg');
+INSERT INTO images_tb (mood, content) VALUES ('Excited','/assets/images/excitied2.jpg');
+INSERT INTO images_tb (mood, content) VALUES ('Exhausted','/assets/images/exhausted1.jpg');
+INSERT INTO images_tb (mood, content) VALUES ('Exhausted','/assets/images/exhausted2.jpg');
+INSERT INTO images_tb (mood, content) VALUES ('Coding','/assets/images/coding1.jpg');
+INSERT INTO images_tb (mood, content) VALUES ('Coding','/assets/images/coding2.jpg');
