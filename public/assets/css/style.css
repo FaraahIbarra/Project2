@@ -1,15 +1,7 @@
 .navbar {
-<<<<<<< HEAD
-
     font-family: 'Allerta Stencil', sans-serif;
     height: 65px;
     font-size: 50px;
-=======
-    font-family: 'Pacifico', cursive;
-
-    height: 75px;
-  
->>>>>>> b164826113d13880849b323913842679f8a2e3a0
 }
 
 .container {
@@ -49,8 +41,8 @@
     background: #ffffff;
     color: black;
     text-align: center;
-    height: 60px;
-    padding-top: 20px;
+    height: 40px;
+    padding-top: 10px;
     font-family: 'Allerta Stencil', sans-serif;
 }
 
