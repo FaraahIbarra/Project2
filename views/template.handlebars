@@ -4,7 +4,7 @@
 <body background="/assets/cssimages/grey-background.jpg">
 
     <nav class="navbar navbar-light" style="background-color: #ffffff;">
-        <span class="navbar-brand mb-0 h1">Meme My Mood 💬</span>
+        <span class="navbar-brand mb-0 h1"><a href="/">Meme My Mood 💬</a></span>
     </nav>
 
     <div class="image-wrapper">
@@ -13,7 +13,6 @@
     </div>
 
     <div class="col-md-8">
-
         <div>
             {{#each meme}}
             <img src="{{content}}" id="imgFile" alt="memeImg" style="display:none;">
@@ -29,6 +28,11 @@
         <a href="javascript:;" class="btn btn-primary btn-block" id="download_meme">
             <i class="fa fa-download" aria-hidden="true"></i> Download
         </a>
+
+<a href="/archive"><button class="fa fa-submit" aria-hidden="true">Submit</button></a>
+        {{!-- <a href="javascript:;" class="btn btn-primary btn-block" id="create_meme">
+            <i class="fa fa-submit" aria-hidden="true"></i> Submit
+        </a> --}}
 
     </div>
 
@@ -92,8 +96,7 @@
                         <div class="row">
                             <label class="control-label col-md-3" for="canvas_size">Meme size:</label>
                             <div class="col-md-7">
-                                <input style="width:100%" id="canvas_size" type="range" min="0" max="1000"
-                                    value="500" />
+                                <input style="width:100%" id="canvas_size" type="range" min="0" max="1000" value="500" />
                             </div>
                             <div class="col-md-2 setting-value">
                                 <span id="canvas_size__val">500</span>px
@@ -105,8 +108,7 @@
                         <div class="row">
                             <label class="control-label col-md-3" for="text_font_size">Font size:</label>
                             <div class="col-md-7">
-                                <input style="width:100%" id="text_font_size" type="range" min="0" max="72"
-                                    value="28" />
+                                <input style="width:100%" id="text_font_size" type="range" min="0" max="72" value="28" />
                             </div>
                             <div class="col-md-2 setting-value">
                                 <span id="text_font_size__val">28</span>pt
@@ -118,8 +120,7 @@
                         <div class="row">
                             <label class="control-label col-md-3" for="text_line_height">Line height:</label>
                             <div class="col-md-7">
-                                <input style="width:100%" id="text_line_height" type="range" min="0" max="100"
-                                    value="15" />
+                                <input style="width:100%" id="text_line_height" type="range" min="0" max="100" value="15" />
                             </div>
                             <div class="col-md-2 setting-value">
                                 <span id="text_line_height__val">15</span>pt
@@ -131,8 +132,7 @@
                         <div class="row">
                             <label class="control-label col-md-3" for="text_stroke_width">Stroke width:</label>
                             <div class="col-md-7">
-                                <input style="width:100%" id="text_stroke_width" type="range" min="0" max="20"
-                                    value="4" />
+                                <input style="width:100%" id="text_stroke_width" type="range" min="0" max="20" value="4" />
                             </div>
                             <div class="col-md-2 setting-value">
                                 <span id="text_stroke_width__val">4</span>pt
@@ -151,7 +151,7 @@
 
 
 
-{{!-- Non-jQuery Code --}}
+    {{!-- Non-jQuery Code --}}
 
     {{!-- _____________________________________________________________________________________________
 
@@ -209,11 +209,11 @@
 
     <!-- BootStrap JavaScript -->
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous">
         </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous">
         </script>
 
     <!-- Our JavaScript -->

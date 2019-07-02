@@ -1,7 +1,3 @@
--- Starter Data --- looks to be best practice to store the paths to the image files in the DB but not the iamges themselves 
--- (this prevents us from having to convet the images to blobs)
--- at least that is what I found here https://stackoverflow.com/questions/6472233/can-i-store-images-in-mysql
-
 INSERT INTO images_tb (mood, content) VALUES ('confused', '/assets/images/confused1.jpg');
 INSERT INTO images_tb (mood, content) VALUES ('confused', '/assets/images/confused2.jpg');
 INSERT INTO images_tb (mood, content) VALUES ('angry','/assets/images/angry1.jpg');
