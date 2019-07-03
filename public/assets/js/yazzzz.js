@@ -158,25 +158,25 @@ $(function () {
 
 
 // ___________________________________________________________________________________
-	// TODO: replace this with a server-side processing method 
 	$('#download_meme').click(function (e) {
 		$(this).attr('href', canvas.toDataURL());
 
 		$(this).attr('download', 'meme.png');
 	});
 
+// ___________________________________________________________________________________
 	$("#create_meme").on("click", function (event) {
 		event.preventDefault();
 		console.log("CLICKED!")
 
 		var dataURL = ('href', canvas.toDataURL());
-		console.log(dataURL);
+		// console.log(dataURL);
 
 		var newMeme = {
-			// ID is based on the meme, top text, bottom text, image IN TABLE
-
-			// mood: $("#id").val().trim(),
-			content: dataURL
+			mood: "testing",
+			content: "/assets/images/coding1.jpg",
+			top_text: "test",
+			bottom_text: "test2"
 		};
 		console.log(newMeme);
 
@@ -187,6 +187,7 @@ $(function () {
 		}).then(
 			function () {
 				console.log("archived new meme");
+				location.reload();
 			}
 		);
 	});

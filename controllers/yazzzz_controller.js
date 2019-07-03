@@ -38,14 +38,13 @@ router.get("/:id", function (req, res) {
 
 
 router.post("/api/memes", function (req, res) {
-    meme.create(["mood", "content"],[req.body.mood, req.body.content], 
+    meme.create(["mood", "content","top_text", "bottom_text"],[req.body.mood, req.body.content, req.body.top_text, req.body.bottom_text], 
     function(result) {
-        res.json({
-            id: result.insertId
-             });
-        res.render("archive", hbsObject)
+        res.json({id: result.insertId });
     });
 });
 
 // Export routes for server.js to use.s
 module.exports = router;
+
+

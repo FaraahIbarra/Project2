@@ -17,13 +17,12 @@ var meme = { //runs the all quiery on the database
             callback(response)
         });
     },
-    create: function() { // save new memes in the memes_tb database
-        orm.create("memes_tb",  function(res) {
-            callback(response);
+    create: function (mood, content, top, bottom) { // save new memes in the memes_tb database
+        orm.create("memes_tb", mood, content, top, bottom, function(response) {
+            // callback(response);
         });
       },
 };
 
 // Export the database functions for the controller (yazz_model).
 module.exports = meme;
-

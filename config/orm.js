@@ -22,13 +22,14 @@ var orm = {
             callback(res);
         })
     },
-    create: function () {
-        var queryString = "INSERT INTO memes_tb (mood, content) VALUES ('angry','/assets/images/asadmeme1.jpg');"
-        connection.query(queryString, function (err, result) {
+    create: function (tableInput, mood, content, top, bottom, callback) {
+        var queryString = "INSERT INTO " + tableInput + "(mood, content, top_text, bottom_text) VALUES ('" + mood + "','" + content + "','" + top + "','" + bottom +"');"
+        connection.query(queryString, function (err, res) {
             if (err) {
                 throw err;
             }
-
+            callback(res)
+            console.log("1 record inserted");
         });
     }
 };
