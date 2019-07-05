@@ -11,79 +11,73 @@
         <img src="/assets/cssimages/whitewall.jpg" height="300px" width="100%" alt="image">
         <p>Memes based on your mood.</p>
     </div>
-
-    <div class="col-md-8">
-        <div>
-            {{#each meme}}
-            <img src="{{content}}" id="imgFile" alt="memeImg" style="display:none;">
-            {{/each}}
-        </div>
-
-        <!-- BEGIN: Canvas rendering of generated Meme -->
-        <canvas id="meme">
-            Unfortunately your browser does not support canvas.
-        </canvas>
-        <!-- END: Canvas rendering of generated Meme -->
-
-        <a href="javascript:;" class="btn btn-primary btn-block" id="download_meme">
-            <i class="fa fa-download" aria-hidden="true"></i> Download
-        </a>
-
-
-<button type="button" id="create_meme">Click Me!</button>
-{{!-- <a href="/archive"><button class="fa fa-submit" aria-hidden="true">Submit</button></a>
-        {{!-- <a href="javascript:;" class="btn btn-primary btn-block" id="create_meme">
-            <i class="fa fa-submit" aria-hidden="true"></i> Submit
-        </a> --}} --}}
-
-    </div>
-
-
-    <hr />
-
-    <h3>Top Text</h3>
-
-    <div class="form-group">
-        <input type="text" class="form-control form-control-lg" value="This Better be" id="text_top" />
-    </div>
-
-    <div class="form-group">
+    <div class="container-fluid">
         <div class="row">
-            <label class="control-label col-md-3" for="text_top_offset">Offset from top:</label>
-            <div class="col-md-7">
-                <input style="width:100%" id="text_top_offset" type="range" min="0" max="500" value="50" />
+            <div class="col-md-6">
+                <div>
+                    {{#each meme}}
+                    <img src="{{content}}" id="imgFile" alt="memeImg" style="display:none;">
+                    {{/each}}
+                </div>
+
+                <!-- BEGIN: Canvas rendering of generated Meme -->
+                <canvas id="meme">
+                    Unfortunately your browser does not support canvas.
+                </canvas>
+                <!-- END: Canvas rendering of generated Meme -->
+
             </div>
-            <div class="col-md-2 setting-value">
-                <span id="text_top_offset__val">50</span>px
+            <div class="col-md-6">
+                <h3>Top Text</h3>
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-lg" value="This Better be" id="text_top" />
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <label class="control-label col-md-3" for="text_top_offset">Offset from top:</label>
+                        <div class="col-md-7">
+                            <input style="width:100%" id="text_top_offset" type="range" min="0" max="500" value="50" />
+                        </div>
+                        <div class="col-md-2 setting-value">
+                            <span id="text_top_offset__val">50</span>px
+                        </div>
+                    </div>
+                </div>
+                <h3>Bottom Text</h3>
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-lg" value="Good" id="text_bottom" />
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <label class="control-label col-md-3" for="text_bottom_offset">Offset from top:</label>
+                        <div class="col-md-7">
+                            <input style="width:100%" id="text_bottom_offset" type="range" min="0" max="500" value="450" />
+                        </div>
+                        <div class="col-md-2 setting-value">
+                            <span id="text_bottom_offset__val">450</span>px
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-
-
-    <p>&nbsp;</p>
-
-    <h3>Bottom Text</h3>
-
-    <div class="form-group">
-        <input type="text" class="form-control form-control-lg" value="Good" id="text_bottom" />
-    </div>
-
-    <div class="form-group">
         <div class="row">
-            <label class="control-label col-md-3" for="text_bottom_offset">Offset from top:</label>
-            <div class="col-md-7">
-                <input style="width:100%" id="text_bottom_offset" type="range" min="0" max="500" value="450" />
+            <div class="col-sm-12">
+                <hr>
             </div>
-            <div class="col-md-2 setting-value">
-                <span id="text_bottom_offset__val">450</span>px
+        </div>
+        <div class="row" style="margin-bottom: 10px">
+            <div class="col-sm-6">
+                <button id="create_meme" class="btn btn-primary btn-block" type="button">Save</button>
+            </div>
+
+            <div class="col-sm-6">
+                <a href="javascript:;" class="btn btn-secondary btn-block" id="download_meme">
+                    <i class="fa fa-download" aria-hidden="true"></i> Download
+                </a>
+
             </div>
         </div>
     </div>
-
-
-    <hr />
-
-    <p>&nbsp;</p>
 
     <div class="card">
         <div class="card-header">

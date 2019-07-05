@@ -29,7 +29,8 @@ var orm = {
                 throw err;
             }
             callback(res)
-            console.log("1 record inserted");
+            console.log(queryString)
+            console.log("ORM Works");
         });
     }
 };

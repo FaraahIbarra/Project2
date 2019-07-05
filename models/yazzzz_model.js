@@ -17,9 +17,9 @@ var meme = { //runs the all quiery on the database
             callback(response)
         });
     },
-    create: function (mood, content, top, bottom) { // save new memes in the memes_tb database
+    create: function (mood, content, top, bottom, callback) { // save new memes in the memes_tb database
         orm.create("memes_tb", mood, content, top, bottom, function(response) {
-            // callback(response);
+            callback(response);
         });
       },
 };

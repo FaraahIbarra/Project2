@@ -164,33 +164,6 @@ $(function () {
 		$(this).attr('download', 'meme.png');
 	});
 
-// ___________________________________________________________________________________
-	$("#create_meme").on("click", function (event) {
-		event.preventDefault();
-		console.log("CLICKED!")
-
-		var dataURL = ('href', canvas.toDataURL());
-		// console.log(dataURL);
-
-		var newMeme = {
-			mood: "testing",
-			content: "/assets/images/coding1.jpg",
-			top_text: "test",
-			bottom_text: "test2"
-		};
-		console.log(newMeme);
-
-		// Send the POST request.
-		$.ajax("/api/memes", {
-			type: "POST",
-			data: newMeme
-		}).then(
-			function () {
-				console.log("archived new meme");
-				location.reload();
-			}
-		);
-	});
 
 
 // ___________________________________________________________________________________
@@ -198,4 +171,32 @@ $(function () {
 	window.setTimeout(function () {
 		drawMeme();
 	}, 100);
+});
+
+
+// ___________________________________________________________________________________
+$("#add").on("click", function (event) {
+	// event.preventDefault();
+	
+	console.log("CLICKED!")
+
+	var newMeme = {
+		mood: "testing",
+		content: "/assets/images/coding1.jpg",
+		top_text: "test",
+		bottom_text: "test2"
+	};
+	console.log(newMeme)
+
+	// Send the POST request.
+	$.ajax({
+		type: "POST",
+		url: "/api/memes",
+		data: newMeme
+	}).then(
+		function () {
+			console.log("archived new meme");
+			// location.reload();
+		}
+	);
 });
