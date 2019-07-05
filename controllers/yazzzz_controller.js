@@ -1,35 +1,44 @@
-// takes in user input
-//process request (get, post, put, delete)
-//gets data from the model
-//passes data to view
-
 var express = require("express");
 var router = express.Router();
-// var test = " " 
-var meme = require("../models/yazzzz_model.js") //this is requiring function from the yazzz model wich talks to the database
+var meme = require("../models/yazzzz_model.js")
 
-router.get("/", function (req, res) { //server is listening and / ther is a get request
-    meme.all(function (data) { //go to the yazz model and use the all function 
-        var hbsObject = { //set a varaible for handlebars to creat dynamic content in view 
+
+router.get("/", function (req, res) {
+    res.render("index")
+    console.log("Home Page Loaded")
+});
+
+// ___________________________________________________________________________________
+router.get("/archive", function (req, res) {
+    meme.all(function (data) {
+        var hbsObject = {
             meme: data
         };
-        // console.log(hbsObject)
-        res.render("index", hbsObject); //send the dynamic contennct to the handlebars index view 
+        console.log("Archive Loaded")
+        res.render("archive", hbsObject);
     });
 });
 
+// ___________________________________________________________________________________
 router.get("/:id", function (req, res) {
     var moodClicks = req.params.id;
     meme.mood(moodClicks, function (data) {
         var hbsObject = {
             meme: data
         };
-        
         console.log(hbsObject)
         res.render("template", hbsObject)
     });
-    
-}); 
+});
+
+// ___________________________________________________________________________________
+router.post("/api/memes", function (req, res) {
+    meme.create([req.body.mood], [req.body.content], [req.body.top_text], [req.body.bottom_text], function (result) {
+        res.json({
+            id: result.insertId
+        });
+    });
+});
 
 // Export routes for server.js to use.s
 module.exports = router;

@@ -1,4 +1,3 @@
--- Starter Data
 INSERT INTO text_tb (mood, content) VALUES ('Confused', "Que?");
 INSERT INTO text_tb (mood, content) VALUES ('Confused', "It's not confusing, but I'm confused");
 INSERT INTO text_tb (mood, content) VALUES ('Angry',"I'm not angry, I'm happiness challenged");

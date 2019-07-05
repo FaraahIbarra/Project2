@@ -1,23 +1,19 @@
 .navbar {
     font-family: 'Allerta Stencil', sans-serif;
-    height: 65px;
-    font-size: 50px;
+    /* height: 65px; */
+    /* font-size: 50px; */
 }
 
 .container {
-    margin-top: 50px;
-    margin-bottom: 100px;
-    /*border-style: double;*/
-    border-radius: 15px;
-    padding-left: 70px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
 }
 
 .image-wrapper {
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     border-bottom: 3px solid #FFF;
-
 }
 
 .image-wrapper p {
@@ -25,7 +21,8 @@
     left: 0;
     top: 0;
     padding-top: 150px;
-    padding-left: 415px;
+    display: flex;
+    justify-content: center;
     width: 100%;
     font-size: 40px;
     color: black;
@@ -47,6 +44,38 @@
 }
 
 .header {
-    margin-left: 500px;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
     font-family: 'Allerta Stencil', sans-serif;
+}
+
+.card-group {
+    margin-left: 100px;
+    margin-right: 100px;
+    border: #FFF 5px solid;
+}
+
+/* These are for the archive */
+
+.meme {
+    height: 450px !important;
+    padding: 5px;
+    overflow: hidden;
+    
+}
+
+.meme:hover {
+  
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.meme:hover .download{
+    display: block;
+    visibility: visible;
+}
+
+.download {
+    visibility: hidden;
 }
