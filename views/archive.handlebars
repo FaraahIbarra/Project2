@@ -1,9 +1,45 @@
-<div class="container">
-    <div= "row">
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false" style="margin-bottom:15px; margin-top:5px">
+        Filter by Mood
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <button class="dropdown-item" type="button">Happy</button>
+        <button class="dropdown-item" type="button">Sad</button>
+        <button class="dropdown-item" type="button">Angry</button>
+        <button class="dropdown-item" type="button">Confused</button>
+        <button class="dropdown-item" type="button">In Love</button>
+        <button class="dropdown-item" type="button">Sassy</button>
+        <button class="dropdown-item" type="button">Over It</button>
+        <button class="dropdown-item" type="button">Excited</button>
+        <button class="dropdown-item" type="button">Exhausted</button>
+        <button class="dropdown-item" type="button">Coding</button>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
         {{#each meme}}
-        <div class="col-sm">
-            <img src="{{content}}" id="imgFile" alt="memeImg">
-        </div>
+        <div class="col-xs-12 col-md-6 col-lg-4 col-xl-3 meme"><img
+                src="{{content}}" id="imgFile" alt="memeImg" height="auto" width="100%" style="margin: 0px; padding:0px; positon:relative"></div>
+               <div style="positon:absolute" style = "z-index: 10"> <i class="fas fa-download" ></i> </div>
         {{/each}}
+    </div>
 </div>
-</div>
+<br>
+<hr>
+<br>
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1">Previous</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="/archive">1</a></li>
+        <li class="page-item"><a class="page-link" href="/archive">2</a></li>
+        <li class="page-item"><a class="page-link" href="/archive">3</a></li>
+        <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+        </li>
+    </ul>
+</nav>

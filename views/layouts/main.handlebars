@@ -20,36 +20,37 @@
 
 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/">💬 Meme My Mood</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link" href="/">Home </a>
-      <a class="nav-item nav-link" href="/archive">Gallery</a>
-      <a class="nav-item nav-link" href="#">My Memes</a>
-    </div>
-  </div>
-</nav>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="/">💬 Meme My Mood</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+		 aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			<div class="navbar-nav">
+				<a class="nav-item nav-link" href="/">Create </a>
+				<a class="nav-item nav-link" href="/archive">Explore</a>
+				<a class="nav-item nav-link" href="#">My Memes</a>
+			</div>
+		</div>
+	</nav>
 
-<script type="text/javascript">
-    $(document).ready(function () {
-        var url = window.location.pathname;
-        $('ul.nav a[href="'+ url +'"]').parent().addClass('active');
-        $('ul.nav a').filter(function() {
-             return this.href == url;
-        }).parent().addClass('active');
-    });
-	console.log(url)
-</script> 
+	{{!-- <script type="text/javascript">
+		$(document).ready(function () {
+			var url = window.location.pathname;
+			$('ul.nav a[href="' + url + '"]').parent().addClass('active');
+			$('ul.nav a').filter(function () {
+				return this.href == url;
+			}).parent().addClass('active');
+		});
+		console.log(url)
+	</script> --}}
 
-{{!-- ______________________Header Image__________________________________________________ --}}
+	{{!-- ______________________Header Image__________________________________________________ --}}
 
-	<div class="image-wrapper" style="position:relative">
-		<img src="/assets/cssimages/whitewall.jpg" height="300px" width="100%" alt="image">
-		<p style = "position:absolute">Memes based on your mood.</p>
+	<div class="image-wrapper" style="position:relative; overflow: hidden; height:450px">
+		<img src="/assets/cssimages/whitewall.jpg" height="auto" width="100%" alt="image" >
+		<p style="position:absolute; padding-top:100px">Memes based on your mood.</p>
 	</div>
 	{{!-- ______________________HANDLEBARS VIEWS_____________________________________________ --}}
 
@@ -57,9 +58,10 @@
 
 	{{!-- _____________________FOOTER________________________________________________________ --}}
 
-	<div class="footer" style="postition:relative">
-		<p>&copy MemeMyMood</p>
-	</div>
+
+	<nav class="navbar navbar-light bg-light" >
+		<a class="navbar-brand" href="/">&copy MemeMyMood</a>
+	</nav>
 
 	<!-- BootStrap JavaScript -->
 	<script src="https://code.jquery.com/jquery.js"></script>

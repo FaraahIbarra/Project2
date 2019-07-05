@@ -56,3 +56,18 @@
     margin-right: 100px;
     border: #FFF 5px solid;
 }
+
+/* These are for the archive */
+
+.meme {
+    height: 450px !important;
+    padding: 5px;
+    overflow: hidden;
+    
+}
+
+.meme:hover {
+    /* border: solid; */
+    /* border-color:steelblue; */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
