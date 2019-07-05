@@ -175,7 +175,7 @@ $(function () {
 
 
 // ___________________________________________________________________________________
-$("#add").on("click", function (event) {
+$("#create_meme").on("click", function (event) {
 	// event.preventDefault();
 	
 	console.log("CLICKED!")
