@@ -64,7 +64,7 @@
             </div>
 
             <!-- BEGIN: Canvas rendering of generated Meme -->
-            <canvas id="meme"> 
+            <canvas id="meme">
                 Unfortunately your browser does not support canvas.
             </canvas>
             <!-- END: Canvas rendering of generated Meme -->
@@ -185,3 +185,35 @@
     </div>
 </div>
 
+<!-- Modal -->
+<div id="memeModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title"><strong>Your Meme can now be found in the gallery. </strong></h2>
+            </div>
+            <div class="modal-body">
+                <span>Use the link below to see what else is out there.</span>
+
+            </div>
+            <div class="modal-footer">
+                <a class="nav-item nav-link" href="/archive">Explore</a>
+                <button type="button" class="btn btn-default" id="closeModal" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+
+    //modal logic
+    $('#closeModal').click(function () {
+        $.get('/', function (req, res) {
+            location.replace(res);
+        })
+    });
+
+</script>

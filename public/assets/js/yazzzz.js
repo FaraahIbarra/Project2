@@ -173,16 +173,25 @@ $(function () {
 
 
 // ___________________________________________________________________________________
-// $("#create_meme").on("click", function (event) {
-// 	// event.preventDefault();
+
+// NEED POST HERE
+
+// $("#create_meme").on("click", function () {
+	
+
+// var newMemeMood = document.getElementById("mood_type").innerText;
+// var newMemeContent = document.getElementById("meme_content").innerText;
+
+// console.log(newMemeMood);
+// console.log(newMemeContent);
 	
 // 	console.log("CLICKED!")
 
 // 	var newMeme = {
-// 		mood: "testing",
-// 		content: convert(),
-// 		top_text: "test",
-// 		bottom_text: "test2"
+// 		mood: newMemeMood,
+// 		content: newMemeContent,
+// 		top_text: $("#text_top").val().trim(),
+// 		bottom_text: $("#text_bottom").val().trim()
 // 	};
 // 	console.log(newMeme)
 
@@ -194,15 +203,6 @@ $(function () {
 // 	}).then(
 // 		function () {
 // 			console.log("archived new meme");
-// 			// location.reload();
 // 		}
 // 	);
 // });
-
-
-// function convert(){
-// 	var canvas = document.getElementById('meme');
-// 	var dataURL = canvas.toDataURL("image/jpeg", 0.5);
-// 	return (dataURL)
-  
-// };
