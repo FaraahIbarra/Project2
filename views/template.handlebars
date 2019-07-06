@@ -1,18 +1,62 @@
+<style>
+
+    #imgFile {
+        display: block;
+        margin: 10px;
+        padding: 5px;
+        width: 450px;
+        height: 450px;
+        background-size: 100%;
+        text-align: center;
+        align-content: center;
+        position: relative;
+    }
+
+    #text_bottom {
+        bottom: 0;
+    }
+
+    #text_top {
+        top: 0;
+    }
+
+</style>
+
+
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
+            <div class="dropdown" width="25%">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false" style="margin-bottom:15px; margin-top:5px">
+                    Change Mood
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <a class="dropdown-item" href="/happy" type="button">Sad</a>
+                    <a class="dropdown-item" href="/sad" type="button">Sad</a>
+                    <a class="dropdown-item" href="/angry" type="button">Angry</a>
+                    <a class="dropdown-item" href="/confused" type="button">Confused</a>
+                    <a class="dropdown-item" href="/inlove" type="button">In Love</a>
+                    <a class="dropdown-item" href="/sassy" type="button">Sassy</a>
+                    <a class="dropdown-item" href="/overit" type="button">Over It</a>
+                    <a class="dropdown-item" href="/excited" type="button">Excited</a>
+                    <a class="dropdown-item" href="/exhausted" type="button">Exhausted</a>
+                    <a class="dropdown-item" href="/coding" type="button">Coding</a>
+                </div>
+            </div>
             <a id="newImage" class="btn btn-link" href="#" role="button">Different Image</a>
             <hr>
         </div>
         <script type="text/javascript">
             var a = document.getElementById("newImage")
             a.href = window.location.pathname
-            console.log (a.href)
+            console.log(a.href)
         </script>
 
 
 
-        <div class="col-md-6">
+        <div class="col-md-6" id="meme-div">
             <div>
                 {{#each meme}}
                 <img src="{{content}}" id="imgFile" alt="memeImg" style="display:none;">
@@ -141,58 +185,35 @@
     </div>
 </div>
 
+<!-- Modal -->
+<div id="memeModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
 
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title"><strong>Your Meme can now be found in the gallery. </strong></h2>
+            </div>
+            <div class="modal-body">
+                <span>Use the link below to see what else is out there.</span>
 
+            </div>
+            <div class="modal-footer">
+                <a class="nav-item nav-link" href="/archive">Explore</a>
+                <button type="button" class="btn btn-default" id="closeModal" data-dismiss="modal">Close</button>
+            </div>
+        </div>
 
-
-
-{{!-- Non-jQuery Code --}}
-
-{{!-- _____________________________________________________________________________________________
-
-<h3><i class="fa fa-commenting-o fa-fw" aria-hidden="true"></i>Meme Text</h3>
-<div class="box">
-    <div>
-        <p>Top Text</p>
-        <input id="textTop" type="text" class="block" placeholder="Top text" />
-    </div>
-    <div>
-        <p>Bottom Text</p>
-        <input id="textBottom" type="text" class="block" placeholder="Bottom text" />
-    </div>
-</div>
-
-
-
-<h3><i class="fa fa-text-height fa-fw" aria-hidden="true"></i>Text Size</h3>
-<div class="box">
-    <div>
-        <p>Top Text: <span id="textSizeTopOut">10</span></p>
-        <input id="textSizeTop" type="range" min="2" max="50" step="2" />
-    </div>
-    <div>
-        <p>Bottom Text: <span id="textSizeBottomOut">10</span></p>
-        <input id="textSizeBottom" type="range" min="2" max="50" step="2" />
     </div>
 </div>
 
+<script>
 
+    //modal logic
+    $('#closeModal').click(function () {
+        $.get('/', function (req, res) {
+            location.replace(res);
+        })
+    });
 
-<div class="box">
-    <div>
-        <h3><i class="fa fa-eye fa-fw" aria-hidden="true"></i>Preview Size</h3>
-        <input id="trueSize" type="checkbox" />
-        <label for="trueSize"><span>Show true size</span></label>
-    </div>
-
-
-
-    <div>
-        <h3><i class="fa fa-download fa-fw" aria-hidden="true"></i>Save Your Meme</h3>
-
-        <button id="export">Export!</button>
-    </div>
-
-</div>
-
-_____________________________________________________________________________________________ --}}
+</script>

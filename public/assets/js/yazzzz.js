@@ -17,20 +17,18 @@ $(function () {
 		$('#text_bottom_offset').attr('max', memeSize);
 
 		// initialize canvas element with desired dimensions
-		canvas.width = img.width;
-		canvas.height = img.height;
+		canvas.width = memeSize;
+		canvas.height = memeSize;
 
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-		// // calculate minimum cropping dimension
-		// var croppingDimension = img.height;
-		// if( img.width < croppingDimension ){
-		// 	croppingDimension = img.width / 2;
-		// }
+		// calculate minimum cropping dimension
+		var croppingDimension = img.height;
+		if (img.width < croppingDimension) {
+			croppingDimension = img.width;
+		}
 
-		// ctx.drawImage(img, 0, 0, croppingDimension, croppingDimension, 0, 0, memeSize, memeSize);
-
-		ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+		ctx.drawImage(img, 0, 0, croppingDimension, croppingDimension, 0, 0, memeSize, memeSize);
 
 
 		ctx.lineWidth = parseInt($('#text_stroke_width').val());
@@ -175,28 +173,36 @@ $(function () {
 
 
 // ___________________________________________________________________________________
-$("#create_meme").on("click", function (event) {
-	// event.preventDefault();
+
+// NEED POST HERE
+
+// $("#create_meme").on("click", function () {
 	
-	console.log("CLICKED!")
 
-	var newMeme = {
-		mood: "testing",
-		content: "/assets/images/coding1.jpg",
-		top_text: "test",
-		bottom_text: "test2"
-	};
-	console.log(newMeme)
+// var newMemeMood = document.getElementById("mood_type").innerText;
+// var newMemeContent = document.getElementById("meme_content").innerText;
 
-	// Send the POST request.
-	$.ajax({
-		type: "POST",
-		url: "/api/memes",
-		data: newMeme
-	}).then(
-		function () {
-			console.log("archived new meme");
-			// location.reload();
-		}
-	);
-});
+// console.log(newMemeMood);
+// console.log(newMemeContent);
+	
+// 	console.log("CLICKED!")
+
+// 	var newMeme = {
+// 		mood: newMemeMood,
+// 		content: newMemeContent,
+// 		top_text: $("#text_top").val().trim(),
+// 		bottom_text: $("#text_bottom").val().trim()
+// 	};
+// 	console.log(newMeme)
+
+// 	// Send the POST request.
+// 	$.ajax({
+// 		type: "POST",
+// 		url: "/api/memes",
+// 		data: newMeme
+// 	}).then(
+// 		function () {
+// 			console.log("archived new meme");
+// 		}
+// 	);
+// });

@@ -9,6 +9,8 @@
 	 crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Allerta+Stencil&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+	 <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase.js"></script>
 	{{!-- Icons --}}
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -35,20 +37,9 @@
 		</div>
 	</nav>
 
-	{{!-- <script type="text/javascript">
-		$(document).ready(function () {
-			var url = window.location.pathname;
-			$('ul.nav a[href="' + url + '"]').parent().addClass('active');
-			$('ul.nav a').filter(function () {
-				return this.href == url;
-			}).parent().addClass('active');
-		});
-		console.log(url)
-	</script> --}}
-
 	{{!-- ______________________Header Image__________________________________________________ --}}
 
-	<div class="image-wrapper" style="position:relative; overflow: hidden; height:450px">
+	<div class="image-wrapper" style="position:relative; overflow: hidden; height:330px">
 		<img src="/assets/cssimages/whitewall.jpg" height="auto" width="100%" alt="image" >
 		<p style="position:absolute; padding-top:100px">Memes based on your mood.</p>
 	</div>
@@ -74,6 +65,7 @@
 
 	<!-- Our JavaScript -->
 	<script src="/assets/js/yazzzz.js"></script>
+	<script src="/assets/js/firebase.js"></script>
 
 </body>
 
