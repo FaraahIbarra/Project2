@@ -3,7 +3,7 @@ $(function () {
 	var canvas = document.getElementById('meme');
 	ctx = canvas.getContext('2d');
 
-// ___________________________________________________________________________________
+	// ___________________________________________________________________________________
 	// core drawing function
 	var drawMeme = function () {
 		var img = document.getElementById('imgFile');
@@ -17,20 +17,18 @@ $(function () {
 		$('#text_bottom_offset').attr('max', memeSize);
 
 		// initialize canvas element with desired dimensions
-		canvas.width = img.width;
-		canvas.height = img.height;
+		canvas.width = memeSize;
+		canvas.height = memeSize;
 
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-		// // calculate minimum cropping dimension
-		// var croppingDimension = img.height;
-		// if( img.width < croppingDimension ){
-		// 	croppingDimension = img.width / 2;
-		// }
+		// calculate minimum cropping dimension
+		var croppingDimension = img.height;
+		if (img.width < croppingDimension) {
+			croppingDimension = img.width;
+		}
 
-		// ctx.drawImage(img, 0, 0, croppingDimension, croppingDimension, 0, 0, memeSize, memeSize);
-
-		ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+		ctx.drawImage(img, 0, 0, croppingDimension, croppingDimension, 0, 0, memeSize, memeSize);
 
 
 		ctx.lineWidth = parseInt($('#text_stroke_width').val());
@@ -60,7 +58,7 @@ $(function () {
 
 	};
 
-// ___________________________________________________________________________________
+	// ___________________________________________________________________________________
 	// build inner container for wrapping text inside
 	var wrapText = function (context, text, x, y, maxWidth, lineHeight, fromBottom) {
 		var pushMethod = (fromBottom) ? 'unshift' : 'push';
@@ -92,7 +90,7 @@ $(function () {
 		}
 	};
 
-// ___________________________________________________________________________________
+	// ___________________________________________________________________________________
 
 	// read selected input image from upload field and display it in browser
 	$("#imgInp").change(function () {
@@ -114,7 +112,7 @@ $(function () {
 		}, 500);
 	});
 
-// ___________________________________________________________________________________
+	// ___________________________________________________________________________________
 
 	// register event listeners
 
@@ -157,7 +155,7 @@ $(function () {
 	});
 
 
-// ___________________________________________________________________________________
+	// ___________________________________________________________________________________
 	$('#download_meme').click(function (e) {
 		$(this).attr('href', canvas.toDataURL());
 
@@ -166,7 +164,7 @@ $(function () {
 
 
 
-// ___________________________________________________________________________________
+	// ___________________________________________________________________________________
 	// init at startup
 	window.setTimeout(function () {
 		drawMeme();
@@ -174,17 +172,24 @@ $(function () {
 });
 
 
+
 // ___________________________________________________________________________________
 $("#create_meme").on("click", function (event) {
 	// event.preventDefault();
+
+var newMemeMood = document.getElementById("mood_type").innerText;
+var newMemeContent = document.getElementById("meme_content").innerText;
+
+console.log(newMemeMood);
+console.log(newMemeContent);
 	
 	console.log("CLICKED!")
 
 	var newMeme = {
-		mood: "testing",
-		content: "/assets/images/coding1.jpg",
-		top_text: "test",
-		bottom_text: "test2"
+		mood: newMemeMood,
+		content: newMemeContent,
+		top_text: $("#text_top").val().trim(),
+		bottom_text: $("#text_bottom").val().trim()
 	};
 	console.log(newMeme)
 

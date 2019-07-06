@@ -1,9 +1,29 @@
+    <style>
+
+    .col-md-6 {
+        align-content: center;
+    }
+
+    #meme {
+        display: block;
+        margin: 5px 10px 5px 30px;
+        text-align: center;
+        align-content: center;
+        position: relative;
+    }
+
+    </style>
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6">
                 <div>
                     {{#each meme}}
-                    <img src="{{content}}" id="imgFile" alt="memeImg" style="display:none;">
+                    <p id="mood_type" style="display:none;">{{mood}}</p>
+
+                    <img id="imgFile" src="{{content}}" alt="memeImg" style="display:none;">
+
+                    <p id="meme_content" style="display:none;">{{content}}</p>
                     {{/each}}
                 </div>
 
@@ -17,7 +37,7 @@
             <div class="col-md-6">
                 <h3>Top Text</h3>
                 <div class="form-group">
-                    <input type="text" class="form-control form-control-lg" value="This Better be" id="text_top" />
+                    <input type="text" class="form-control form-control-lg" value="Your Text" id="text_top" />
                 </div>
                 <div class="form-group">
                     <div class="row">
@@ -32,7 +52,7 @@
                 </div>
                 <h3>Bottom Text</h3>
                 <div class="form-group">
-                    <input type="text" class="form-control form-control-lg" value="Good" id="text_bottom" />
+                    <input type="text" class="form-control form-control-lg" value="Goes Here" id="text_bottom" />
                 </div>
                 <div class="form-group">
                     <div class="row">
@@ -129,59 +149,4 @@
         </div>
     </div>
 
-
-
-
-
-
-    {{!-- Non-jQuery Code --}}
-
-    {{!-- _____________________________________________________________________________________________
-
-    <h3><i class="fa fa-commenting-o fa-fw" aria-hidden="true"></i>Meme Text</h3>
-    <div class="box">
-        <div>
-            <p>Top Text</p>
-            <input id="textTop" type="text" class="block" placeholder="Top text" />
-        </div>
-        <div>
-            <p>Bottom Text</p>
-            <input id="textBottom" type="text" class="block" placeholder="Bottom text" />
-        </div>
-    </div>
-
-
-
-    <h3><i class="fa fa-text-height fa-fw" aria-hidden="true"></i>Text Size</h3>
-    <div class="box">
-        <div>
-            <p>Top Text: <span id="textSizeTopOut">10</span></p>
-            <input id="textSizeTop" type="range" min="2" max="50" step="2" />
-        </div>
-        <div>
-            <p>Bottom Text: <span id="textSizeBottomOut">10</span></p>
-            <input id="textSizeBottom" type="range" min="2" max="50" step="2" />
-        </div>
-    </div>
-
-
-
-    <div class="box">
-        <div>
-            <h3><i class="fa fa-eye fa-fw" aria-hidden="true"></i>Preview Size</h3>
-            <input id="trueSize" type="checkbox" />
-            <label for="trueSize"><span>Show true size</span></label>
-        </div>
-
-
-
-        <div>
-            <h3><i class="fa fa-download fa-fw" aria-hidden="true"></i>Save Your Meme</h3>
-
-            <button id="export">Export!</button>
-        </div>
-
-    </div>
-
-    _____________________________________________________________________________________________ --}}
 
