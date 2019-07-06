@@ -30,7 +30,7 @@ $(function () {
 
 		// ctx.drawImage(img, 0, 0, croppingDimension, croppingDimension, 0, 0, memeSize, memeSize);
 
-		ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+		ctx.drawImage(img, 5, 5, canvas.width, canvas.height);
 
 
 		ctx.lineWidth = parseInt($('#text_stroke_width').val());
@@ -175,28 +175,36 @@ $(function () {
 
 
 // ___________________________________________________________________________________
-$("#create_meme").on("click", function (event) {
-	// event.preventDefault();
+// $("#create_meme").on("click", function (event) {
+// 	// event.preventDefault();
 	
-	console.log("CLICKED!")
+// 	console.log("CLICKED!")
 
-	var newMeme = {
-		mood: "testing",
-		content: "/assets/images/coding1.jpg",
-		top_text: "test",
-		bottom_text: "test2"
-	};
-	console.log(newMeme)
+// 	var newMeme = {
+// 		mood: "testing",
+// 		content: convert(),
+// 		top_text: "test",
+// 		bottom_text: "test2"
+// 	};
+// 	console.log(newMeme)
 
-	// Send the POST request.
-	$.ajax({
-		type: "POST",
-		url: "/api/memes",
-		data: newMeme
-	}).then(
-		function () {
-			console.log("archived new meme");
-			// location.reload();
-		}
-	);
-});
+// 	// Send the POST request.
+// 	$.ajax({
+// 		type: "POST",
+// 		url: "/api/memes",
+// 		data: newMeme
+// 	}).then(
+// 		function () {
+// 			console.log("archived new meme");
+// 			// location.reload();
+// 		}
+// 	);
+// });
+
+
+// function convert(){
+// 	var canvas = document.getElementById('meme');
+// 	var dataURL = canvas.toDataURL("image/jpeg", 0.5);
+// 	return (dataURL)
+  
+// };
