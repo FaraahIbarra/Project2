@@ -36,7 +36,7 @@ database.ref().on("child_added", function (dataSnapshot) {
     var content = data.content
     console.log("sent");
     var drop = $('#drop');
-    var download = $("<a>").attr("href","#")
+    var download = $("<a>").attr({href: data.content, download: "Meme"})
     var icon = $("<i>").attr({class:"fas fa-download download", style:"position:absolute !important; right: 25px; top:25px; color:white; z-index: 100"});
     var col = $('<div>').attr({class:"col-xs-12 col-md-6 col-lg-4 col-xl-3 meme", style: "positon:absolute"});
     var img = $('<img>').attr({src: content, alt:"memeImg", height:"auto", width:"100%", style:"margin: 0px; padding:0px; z-index: -2"});

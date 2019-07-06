@@ -1,18 +1,62 @@
+<style>
+
+    #imgFile {
+        display: block;
+        margin: 10px;
+        padding: 5px;
+        width: 450px;
+        height: 450px;
+        background-size: 100%;
+        text-align: center;
+        align-content: center;
+        position: relative;
+    }
+
+    #text_bottom {
+        bottom: 0;
+    }
+
+    #text_top {
+        top: 0;
+    }
+
+</style>
+
+
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
+            <div class="dropdown" width="25%">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false" style="margin-bottom:15px; margin-top:5px">
+                    Change Mood
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <a class="dropdown-item" href="/happy" type="button">Sad</a>
+                    <a class="dropdown-item" href="/sad" type="button">Sad</a>
+                    <a class="dropdown-item" href="/angry" type="button">Angry</a>
+                    <a class="dropdown-item" href="/confused" type="button">Confused</a>
+                    <a class="dropdown-item" href="/inlove" type="button">In Love</a>
+                    <a class="dropdown-item" href="/sassy" type="button">Sassy</a>
+                    <a class="dropdown-item" href="/overit" type="button">Over It</a>
+                    <a class="dropdown-item" href="/excited" type="button">Excited</a>
+                    <a class="dropdown-item" href="/exhausted" type="button">Exhausted</a>
+                    <a class="dropdown-item" href="/coding" type="button">Coding</a>
+                </div>
+            </div>
             <a id="newImage" class="btn btn-link" href="#" role="button">Different Image</a>
             <hr>
         </div>
         <script type="text/javascript">
             var a = document.getElementById("newImage")
             a.href = window.location.pathname
-            console.log (a.href)
+            console.log(a.href)
         </script>
 
 
 
-        <div class="col-md-6">
+        <div class="col-md-6" id="meme-div">
             <div>
                 {{#each meme}}
                 <img src="{{content}}" id="imgFile" alt="memeImg" style="display:none;">

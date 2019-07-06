@@ -17,20 +17,18 @@ $(function () {
 		$('#text_bottom_offset').attr('max', memeSize);
 
 		// initialize canvas element with desired dimensions
-		canvas.width = img.width;
-		canvas.height = img.height;
+		canvas.width = memeSize;
+		canvas.height = memeSize;
 
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-		// // calculate minimum cropping dimension
-		// var croppingDimension = img.height;
-		// if( img.width < croppingDimension ){
-		// 	croppingDimension = img.width / 2;
-		// }
+		// calculate minimum cropping dimension
+		var croppingDimension = img.height;
+		if (img.width < croppingDimension) {
+			croppingDimension = img.width;
+		}
 
-		// ctx.drawImage(img, 0, 0, croppingDimension, croppingDimension, 0, 0, memeSize, memeSize);
-
-		ctx.drawImage(img, 5, 5, canvas.width, canvas.height);
+		ctx.drawImage(img, 0, 0, croppingDimension, croppingDimension, 0, 0, memeSize, memeSize);
 
 
 		ctx.lineWidth = parseInt($('#text_stroke_width').val());
