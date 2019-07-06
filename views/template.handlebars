@@ -7,7 +7,7 @@
         <script type="text/javascript">
             var a = document.getElementById("newImage")
             a.href = window.location.pathname
-            console.log (a.href)
+            console.log(a.href)
         </script>
 
 
@@ -15,8 +15,13 @@
         <div class="col-md-6">
             <div>
                 {{#each meme}}
-                <img src="{{content}}" id="imgFile" alt="memeImg" style="display:none;">
+                <p id="mood_type" style="display:none;">{{mood}}</p>
+
+                <img id="imgFile" src="{{content}}" alt="memeImg" style="display:none;">
+
+                <p id="meme_content" style="display:none;">{{content}}</p>
                 {{/each}}
+
             </div>
 
             <!-- BEGIN: Canvas rendering of generated Meme -->
@@ -98,10 +103,6 @@
                         </div>
                     </div>
                 </div>
-                <h3>Bottom Text</h3>
-                <div class="form-group">
-                    <input type="text" class="form-control form-control-lg" value="Goes Here" id="text_bottom" />
-                </div>
                 <div class="form-group">
                     <div class="row">
                         <label class="control-label col-md-3" for="text_font_size">Font size:</label>
@@ -143,5 +144,3 @@
 
     </div>
 </div>
-
-

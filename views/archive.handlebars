@@ -1,3 +1,60 @@
+<style>
+    .container-fluid {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #meme-div {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    #imgFile {
+        display: block;
+        margin: 10px;
+        padding: 5px;
+        width: 450px;
+        height: 450px;
+        background-size: 100%;
+        text-align: center;
+        align-content: center;
+        position: relative;
+    }
+
+    #text_top,
+    #text_bottom {
+        position: absolute;
+        text-align: center;
+        left: 0;
+        right: 0;
+        margin: 15px;
+        padding: 5px 15px 5px 5px;
+        font-family: impact;
+        font-size: 2.5em;
+        text-transform: uppercase;
+        color: white;
+        letter-spacing: 1px;
+        text-shadow: 2px 2px 0 #000,
+            -2px -2px 0 #000,
+            2px -2px 0 #000,
+            -2px 2px 0 #000,
+            0px 2px 0 #000,
+            2px 0px 0 #000,
+            0px -2px 0 #000,
+            -2px 0px 0 #000,
+            2px 2px 5px #000;
+    }
+
+    #text_bottom {
+        bottom: 0;
+    }
+
+    #text_top {
+        top: 0;
+    }
+</style>
+
 <div class="dropdown">
     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
         aria-haspopup="true" aria-expanded="false" style="margin-bottom:15px; margin-top:5px">
@@ -18,18 +75,24 @@
 </div>
 
 <div class="container-fluid">
-    <div class="row">
-        {{#each meme}}
-        <div class="col-xs-12 col-md-6 col-lg-4 col-xl-3 meme" style="positon:absolute" onclick="">
-            <i class="fas fa-download download" style="position:absolute !important; right: 25px; top:25px; color:white" style = "z-index: 100"></i> 
-            <a href="{{content}}" download>
-            <img src="{{content}}" id="{{content}}" alt="memeImg" height="auto" width="100%" style="margin: 0px; padding:0px; z-index: -2">
-            </a>
-            </div>
-               
-        {{/each}}
+    {{#each meme}}
+    <div class="col-xs-12 col-md-6 col-lg-4 col-xl-3 meme" id="meme-div" style="positon:absolute" onclick="">
+
+        <i class="fas fa-download download" style="position:absolute !important; right: 25px; top:25px; color:white"
+            style="z-index: 100"></i>
+
+        <a href="{{content}}" download>
+            <img src="{{content}}" id="imgFile" alt="memeImg">
+        </a>
+
+        <div type="text" value="{{top_text}}" id="text_top">{{top_text}}</div>
+
+        <div type="text" value="{{bottom_text}}" id="text_bottom">{{bottom_text}}</div>
+
     </div>
+    {{/each}}
 </div>
+
 <br>
 <hr>
 <br>
