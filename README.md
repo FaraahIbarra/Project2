@@ -7,9 +7,6 @@ Basic functionality:
 4) Store the history
 
 
-
-
-
 Basic MVP:
 User selects a button to radomly generate an image from database
     //create mood buttons
@@ -24,7 +21,12 @@ new meme populates on meme page
     //new meme file is added to database and displayed on newe page 
 
 
+Current State:
+Create, save, and download memes
 
-Backlog
-meme disoplay in modal 
+
+
+Future state:
+My Memes - create owners of memes
+Filters by mood
 Share and send feature
