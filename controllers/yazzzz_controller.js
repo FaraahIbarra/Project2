@@ -8,18 +8,6 @@ router.get("/", function (req, res) {
     console.log("Home Page Loaded")
 });
 
-
-// ___________________________________________________________________________________
-// router.get("/api/memes", function (req, res) {
-//     meme.all(function (data) {
-//         var hbsObject = {
-//             meme: data
-//         };
-//         res.render("archive", hbsObject);
-//         console.log("API Loaded")
-//     });
-// });
-
 // ___________________________________________________________________________________
 router.get("/archive", function (req, res) {
     meme.all(function (data) {
@@ -51,10 +39,6 @@ router.post("/api/memes", function (req, res) {
         });
     });
 });
-
-// router.get("/api/memes", function(req, res) {
-//     return res.json(res);
-//   });
 
 // Export routes for server.js to use.s
 module.exports = router;

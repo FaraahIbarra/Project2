@@ -1,6 +1,3 @@
-{{!-- User interface, what the user sees when they use the application (HTML/CSS/Dynamic content from controller) --}}
-{{!-- Template engine here is "handlebars" - dynamic data --}}
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,6 +9,9 @@
 	 crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Allerta+Stencil&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+	{{!-- Icons --}}
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<title>Meme My Mood</title>
 
 <body style="background:lightgray">
@@ -57,9 +57,10 @@
 
 	{{!-- _____________________FOOTER________________________________________________________ --}}
 
-	<div class="footer" style="postition:relative">
-		<p>&copy MemeMyMood</p>
-	</div>
+
+	<nav class="navbar navbar-light bg-light" >
+		<a class="navbar-brand" href="/">&copy MemeMyMood</a>
+	</nav>
 
 	<!-- BootStrap JavaScript -->
 	<script src="https://code.jquery.com/jquery.js"></script>
